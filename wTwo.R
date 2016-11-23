@@ -13,7 +13,7 @@ ws <- win %>% select(No:type,t21,t22,t23,t00,t01,t02,t03,t04,t05,t06,t07,t08,t09
 ws[ws==32766] <- NA
 save(ws, file = "ws.rda") #WindSpeed no QC
 #=======================================
-#求显著性差异p
+#求显著性差异
 load("dataSets/ws.rda")
 wst02 <- ws %>% select(No, year, mon, day,type, t02)
 wst02$tt <- wst02$t02/10
